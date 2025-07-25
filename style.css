@@ -94,3 +94,11 @@ footer {
   padding: 2rem;
   margin-top: 3rem;
 }
+
+.project-card {
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
