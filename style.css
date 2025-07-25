@@ -24,14 +24,33 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
 }
-nav ul {
+.nav-menu {
+  position: relative;
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 1.5rem;
+  align-items: center;
 }
-nav a.active {
-  border-bottom: 2px solid #90cdf4;
-  color: #90cdf4;
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  z-index: 1;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  background: #90cdf4;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  z-index: 0;
+  width: 0;
+  transform: translateY(5px);
 }
 
 .hero {
