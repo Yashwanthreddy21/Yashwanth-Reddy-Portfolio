@@ -88,33 +88,25 @@ footer {
   margin-top: 3rem;
 }
 
-.typing-lines {
-  font-size: 1.2rem;
-  text-align: center;
-  white-space: nowrap;
-  min-height: 100px;
+#cursor {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  animation: blink 0.7s infinite;
 }
 
-.line {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: typeIn 1.2s ease-out forwards;
-  margin: 0.25rem 0;
-}
-
-#line1 { animation-delay: 0.5s; }
-#line2 { animation-delay: 2.2s; }
-#line3 { animation-delay: 3.9s; }
-#line4 { animation-delay: 5.6s; }
-
-@keyframes typeIn {
-  to {
-    opacity: 1;
-    transform: translateX(0);
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }
 
-/* Lock hero height */
+.hero p {
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
 .hero {
   background: #0077cc;
   color: white;
@@ -125,4 +117,3 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
-
