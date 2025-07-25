@@ -88,48 +88,41 @@ footer {
   margin-top: 3rem;
 }
 
-/* Typing Animation */
-#typing {
-  font-weight: bold;
+.typing-lines {
   font-size: 1.2rem;
-  border-right: 2px solid;
+  text-align: center;
   white-space: nowrap;
-  overflow: hidden;
-  animation: blink 0.75s step-end infinite;
+  min-height: 100px;
 }
-@keyframes blink {
-  50% {
-    border-color: transparent;
+
+.line {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: typeIn 1.2s ease-out forwards;
+  margin: 0.25rem 0;
+}
+
+#line1 { animation-delay: 0.5s; }
+#line2 { animation-delay: 2.2s; }
+#line3 { animation-delay: 3.9s; }
+#line4 { animation-delay: 5.6s; }
+
+@keyframes typeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-/* Dark Mode */
-.dark-mode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-.dark-mode header {
-  background: #000;
-}
-.dark-mode nav a {
-  color: #90cdf4;
-}
-.dark-mode .project-card {
-  background-color: #1f1f1f;
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
-}
-.dark-mode button {
-  background: #333;
-  color: #fff;
-}
-.dark-toggle {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  background: transparent;
+/* Lock hero height */
+.hero {
+  background: #0077cc;
   color: white;
-  border: 1px solid white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
+  text-align: center;
+  padding: 4rem 1rem;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
