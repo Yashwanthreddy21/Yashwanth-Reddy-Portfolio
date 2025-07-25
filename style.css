@@ -117,3 +117,32 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
+
+
+.learning {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  background: #f4f4f4;
+  border-radius: 8px;
+}
+
+.learning h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.learning-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.learning-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.05rem;
+}
+
+.learning-list li:last-child {
+  border-bottom: none;
+}
