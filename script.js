@@ -34,42 +34,24 @@ function typeFullLine() {
 }
 
 typeFullLine();
-// ScrollSpy
-const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
+const navIndicator = document.querySelector(".nav-indicator");
 
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 100) {
-      current = section.getAttribute("id");
-    }
-  });
+function setIndicator(el) {
+  const parent = el.parentElement;
+  const offsetLeft = el.offsetLeft;
+  const width = el.offsetWidth;
 
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
-});
-
-
-const links = document.querySelectorAll(".nav-link");
-const indicator = document.querySelector(".nav-indicator");
-
-function updateIndicator(el) {
-  const rect = el.getBoundingClientRect();
-  indicator.style.width = `${rect.width}px`;
-  indicator.style.left = `${el.offsetLeft}px`;
+  navIndicator.style.left = `${offsetLeft}px`;
+  navIndicator.style.width = `${width}px`;
 }
 
-links.forEach(link => {
-  link.addEventListener("mouseenter", () => updateIndicator(link));
+navLinks.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    setIndicator(link);
+  });
 });
 
-// ScrollSpy for indicator movement
 window.addEventListener("scroll", () => {
   let currentSection = "";
   document.querySelectorAll("section").forEach(section => {
@@ -79,29 +61,21 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  links.forEach(link => {
+  navLinks.forEach(link => {
     link.classList.remove("active");
     if (link.getAttribute("href") === `#${currentSection}`) {
       link.classList.add("active");
-      updateIndicator(link);
+      setIndicator(link);
     }
   });
 });
 
-// On load – align to current scroll position
+// Init on load
 window.addEventListener("load", () => {
-  const active = document.querySelector(".nav-link.active") || links[0];
-  updateIndicator(active);
+  const active = document.querySelector(".nav-link.active") || navLinks[0];
+  setIndicator(active);
 });
 
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
-});
 
 
 
