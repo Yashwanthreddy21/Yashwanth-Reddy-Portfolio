@@ -35,18 +35,44 @@ function typeFullLine() {
 
 typeFullLine();
 
-// ScrollSpy
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
+const links = document.querySelectorAll(".nav-link");
+const indicator = document.querySelector(".nav-indicator");
 
+function updateIndicator(el) {
+  const rect = el.getBoundingClientRect();
+  indicator.style.width = `${rect.width}px`;
+  indicator.style.left = `${el.offsetLeft}px`;
+}
+
+links.forEach(link => {
+  link.addEventListener("mouseenter", () => updateIndicator(link));
+});
+
+// ScrollSpy for indicator movement
 window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach(section => {
+  let currentSection = "";
+  document.querySelectorAll("section").forEach(section => {
     const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 100) {
-      current = section.getAttribute("id");
+    if (scrollY >= sectionTop - 120) {
+      currentSection = section.getAttribute("id");
     }
   });
+
+  links.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+      updateIndicator(link);
+    }
+  });
+});
+
+// On load – align to current scroll position
+window.addEventListener("load", () => {
+  const active = document.querySelector(".nav-link.active") || links[0];
+  updateIndicator(active);
+});
+
 
   navLinks.forEach(link => {
     link.classList.remove("active");
