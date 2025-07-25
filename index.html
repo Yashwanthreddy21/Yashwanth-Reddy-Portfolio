@@ -6,7 +6,6 @@
   <title>Yashwanth Reddy Vennapusa | Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 </head>
 <body>
 
@@ -20,74 +19,69 @@
         <li><a href="https://www.linkedin.com/in/yashwanth-reddy-vennapusa/" target="_blank">LinkedIn</a></li>
       </ul>
     </nav>
+    <button onclick="toggleDarkMode()" class="dark-toggle">🌙 Dark Mode</button>
   </header>
 
   <section class="hero">
     <h1>Hi, I'm Yashwanth 👋</h1>
     <p><span id="typing"></span></p>
-
   </section>
 
-  <section id="about" class="about">
+  <section id="about" class="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
-      I am a Master's student in Computer Science at Missouri State University, passionate about software engineering, machine learning, blockchain, and full-stack development. With a strong foundation in programming languages such as Python, Java, and C, along with frameworks like Django and Spring Boot, I have worked on projects that address real-world challenges.
-
-Projects and Interests:
-
-Developed a Gym Management System using Django for seamless membership management.
-Built an Indian Sign Language Recognition model using OpenCV and TensorFlow to improve accessibility.
-Explored Blockchain for Financial Transactions, enhancing security in digital transactions.
-Worked on Forest Cover Type Prediction using machine learning models, achieving 98.6 percent accuracy with Random Forest.
-I am actively expanding my expertise in cloud technologies and data security while seeking opportunities in software development, artificial intelligence, machine learning, and blockchain security.
+      I'm a Master's student in Computer Science at Missouri State University, passionate about software engineering, ML, blockchain, and full-stack dev.
+      I've built real-world projects like a Django Gym Management System, ISL recognition with TensorFlow, and forest cover prediction with Random Forest.
     </p>
   </section>
 
-  <section id="projects" class="projects">
+  <section id="projects" class="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="project-grid">
-      <div class="project-card">
-  <img src="assets/air.gif" alt="Air Quality Project"/>
-  <h3>Air Quality Prediction</h3>
-  <p>Used Spark + GBTRegressor for PM2.5 prediction in distributed systems.</p>
-  <a href="https://github.com/Yashwanthreddy21/Air-Quality-Prediction-using-Big-Data-Regression-Techniques" target="_blank" class="btn">View Code</a>
-</div>
+      <div class="project-card" data-aos="fade-up">
+        <img src="assets/air.gif" alt="Air Quality Project"/>
+        <h3>Air Quality Prediction</h3>
+        <p>Used Spark + GBTRegressor for PM2.5 prediction in distributed systems.</p>
+        <a href="https://github.com/Yashwanthreddy21/Air-Quality-Prediction-using-Big-Data-Regression-Techniques" target="_blank" class="btn">View Code</a>
+      </div>
 
-
-      <div class="project-card">
+      <div class="project-card" data-aos="fade-up">
         <img src="assets/Gym.gif" alt="Gym Management"/>
         <h3>Gym Management System</h3>
-        <p>Developed a Django app for managing gym members, payments, and schedules.</p>
-<a href="https://github.com/Yashwanthreddy21/Gym-Management-System-Using-Django" target="_blank" class="btn">View Code</a>
+        <p>Django-based app for managing gym members and schedules.</p>
+        <a href="https://github.com/Yashwanthreddy21/Gym-Management-System-Using-Django" target="_blank" class="btn">View Code</a>
       </div>
-      <div class="project-card">
+
+      <div class="project-card" data-aos="fade-up">
         <img src="assets/Sign.gif" alt="Sign Language"/>
         <h3>Sign Language Recognition</h3>
-        <p>Real-time recognition system using TensorFlow & OpenCV with live webcam input.</p>
-<a href="https://github.com/Yashwanthreddy21/Real-Time-Sign-Language-Recognition-Using-OpenCV-and-TensorFlow" target="_blank" class="btn">View Code</a>
+        <p>TensorFlow + OpenCV real-time ISL recognition with webcam input.</p>
+        <a href="https://github.com/Yashwanthreddy21/Real-Time-Sign-Language-Recognition-Using-OpenCV-and-TensorFlow" target="_blank" class="btn">View Code</a>
       </div>
-      <div class="project-card">
+
+      <div class="project-card" data-aos="fade-up">
         <img src="assets/load.gif" alt="Wireless Load"/>
         <h3>Network Load Prediction</h3>
-        <p>Forecasted wireless load using LSTM + XGBoost models.</p>
-<a href="https://github.com/Yashwanthreddy21/Air-Quality-Prediction-using-Big-Data-Regression-Techniques" target="_blank" class="btn">View Code</a>
+        <p>LSTM + XGBoost for forecasting wireless load traffic patterns.</p>
+        <a href="#" target="_blank" class="btn">View Code</a>
       </div>
-      <div class="project-card">
-        <img src="assets/forest.gif" alt="ForestCoverTypePrediction"/>
+
+      <div class="project-card" data-aos="fade-up">
+        <img src="assets/forest.gif" alt="Forest Cover Prediction"/>
         <h3>Forest Cover Type Prediction</h3>
-        <p>Predicted the area size</p>
-<a href="https://github.com/Yashwanthreddy21/Forest-Cover-Type-Prediction" target="_blank" class="btn">View Code</a>
+        <p>Random Forest model with 98.6% accuracy on terrain classification.</p>
+        <a href="https://github.com/Yashwanthreddy21/Forest-Cover-Type-Prediction" target="_blank" class="btn">View Code</a>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
-    <form action="https://formsubmit.co/yashwanthvennapusa5@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
+    <form action="https://formsubmit.co/yashwanthvennapusa5@gmail.com" method="POST" id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
     </form>
     <p id="formMsg"></p>
   </section>
@@ -98,7 +92,6 @@ I am actively expanding my expertise in cloud technologies and data security whi
 
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-
+  <script>AOS.init();</script>
 </body>
 </html>
