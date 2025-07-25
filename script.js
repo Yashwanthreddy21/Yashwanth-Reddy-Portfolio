@@ -4,29 +4,17 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   this.reset();
 });
 
-// Typing Animation
-const words = ["Graduate Student", "ML Developer", "Web Enthusiast", "Blockchain Explorer"];
-let i = 0, j = 0, currentWord = "", isDeleting = false;
+const lines = [
+  "Graduate Student",
+  "ML Developer",
+  "Web Enthusiast",
+  "Blockchain Explorer"
+];
 
-function type() {
-  currentWord = words[i];
-  let display = isDeleting ? currentWord.substring(0, j--) : currentWord.substring(0, j++);
+lines.forEach((text, idx) => {
+  setTimeout(() => {
+    const lineElement = document.getElementById(`line${idx + 1}`);
+    lineElement.textContent = text;
+  }, 200 + idx * 1700); // slower pace between lines
+});
 
-  document.getElementById("typing").textContent = display;
-
-  if (!isDeleting && j === currentWord.length) {
-    isDeleting = true;
-    setTimeout(type, 1000);
-  } else if (isDeleting && j === 0) {
-    isDeleting = false;
-    i = (i + 1) % words.length;
-  }
-
-  setTimeout(type, 100);
-}
-type();
-
-// Dark Mode
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-}
