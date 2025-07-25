@@ -1,10 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   background: #fdfdfd;
   color: #333;
 }
-
 header {
   background: #1a1a1a;
   color: white;
@@ -12,72 +14,64 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
-
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 nav ul {
   display: flex;
   list-style: none;
   gap: 1rem;
 }
-
 nav a {
   color: white;
   text-decoration: none;
 }
-
 .hero {
   background: #0077cc;
   color: white;
   text-align: center;
   padding: 4rem 1rem;
 }
-
-.about,
-.projects,
-.contact {
+.about, .projects, .contact {
   padding: 3rem 2rem;
   max-width: 1000px;
   margin: auto;
 }
-
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
-
 .project-card {
   background: white;
   border-radius: 8px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   padding: 1rem;
   text-align: center;
+  transition: transform 0.3s ease;
 }
-
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
 .project-card img {
   width: 100%;
-  height: auto;
   border-radius: 5px;
 }
-
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 input, textarea {
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
 button {
   background: #0077cc;
   color: white;
@@ -86,7 +80,6 @@ button {
   cursor: pointer;
   border-radius: 4px;
 }
-
 footer {
   text-align: center;
   background: #1a1a1a;
@@ -95,10 +88,48 @@ footer {
   margin-top: 3rem;
 }
 
-.project-card {
-  transition: transform 0.3s ease;
+/* Typing Animation */
+#typing {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.75s step-end infinite;
 }
-.project-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+.dark-mode header {
+  background: #000;
+}
+.dark-mode nav a {
+  color: #90cdf4;
+}
+.dark-mode .project-card {
+  background-color: #1f1f1f;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+}
+.dark-mode button {
+  background: #333;
+  color: #fff;
+}
+.dark-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
