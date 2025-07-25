@@ -36,14 +36,13 @@ header {
 }
 
 .nav-link {
-  position: relative;
+  display: inline-block;
   padding: 0.5rem 1rem;
+  position: relative;
   z-index: 1;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 500;
+  line-height: 1;
 }
+
 
 .nav-link.active {
   color: #1a1a1a;
@@ -51,15 +50,15 @@ header {
 
 .nav-indicator {
   position: absolute;
-  bottom: 5px;
+  top: 50%;
+  transform: translateY(-50%);
   height: 35px;
   background: #90cdf4;
   border-radius: 50px;
   transition: all 0.3s ease;
   z-index: 0;
-  width: 0;
-  transform: translateY(5px);
 }
+
 
 
 .hero {
