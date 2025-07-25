@@ -24,6 +24,19 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+nav a.active {
+  border-bottom: 2px solid #90cdf4;
+  color: #90cdf4;
+}
+
+
 .nav-menu {
   position: relative;
   display: flex;
