@@ -112,7 +112,7 @@ footer {
   color: white;
   text-align: center;
   padding: 4rem 1rem;
-  min-height: 300px;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
