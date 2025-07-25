@@ -4,6 +4,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   this.reset();
 });
 
+// Typing Animation
 const words = ["Graduate Student", "ML Developer", "Web Enthusiast", "Blockchain Explorer"];
 let i = 0, j = 0, currentWord = "", isDeleting = false;
 
@@ -24,3 +25,8 @@ function type() {
   setTimeout(type, 100);
 }
 type();
+
+// Dark Mode
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
