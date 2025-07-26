@@ -218,3 +218,60 @@ footer {
   font-size: 1.1rem;
 }
 
+
+.research {
+  padding: 3rem 2rem;
+  background: #fafafa;
+  text-align: center;
+}
+
+.research h2 {
+  font-size: 2rem;
+  color: #0077cc;
+  margin-bottom: 2rem;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.research-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.research-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.research-card h3 {
+  color: #0077cc;
+  margin-bottom: 0.5rem;
+}
+
+.research-card p {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.research-card .btn {
+  display: inline-block;
+  background: #0077cc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
