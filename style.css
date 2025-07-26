@@ -33,14 +33,32 @@ section {
 }
 
 
-.nav-menu {
+nav {
   position: relative;
+}
+
+.nav-menu {
   display: flex;
-  gap: 1.5rem;
-  align-items: center;
+  gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-link {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #1a1a1a;
 }
 
 .nav-indicator {
@@ -52,21 +70,10 @@ section {
   border-radius: 999px;
   transition: all 0.4s ease;
   z-index: 0;
+  pointer-events: none;
   width: 0;
 }
 
-.nav-link {
-  position: relative;
-  z-index: 1;
-  padding: 0.5rem 1rem;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav-link.active {
-  color: #1a1a1a;
-}
 
 
 
