@@ -39,16 +39,15 @@ const navLinks = document.querySelectorAll(".nav-link");
 const navIndicator = document.querySelector(".nav-indicator");
 
 function updateIndicator(link) {
-  const offsetLeft = link.offsetLeft;
-  const width = link.offsetWidth;
-  navIndicator.style.left = `${offsetLeft}px`;
-  navIndicator.style.width = `${width}px`;
+  const rect = link.getBoundingClientRect();
+  const parentRect = link.closest("nav").getBoundingClientRect();
+
+  navIndicator.style.left = `${rect.left - parentRect.left}px`;
+  navIndicator.style.width = `${rect.width}px`;
 }
 
 navLinks.forEach(link => {
-  link.addEventListener("mouseenter", () => {
-    updateIndicator(link);
-  });
+  link.addEventListener("mouseenter", () => updateIndicator(link));
 });
 
 window.addEventListener("scroll", () => {
