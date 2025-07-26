@@ -48,13 +48,6 @@ section {
   padding: 0;
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 0.75rem;
-  transition: color 0.3s ease;
-}
 
 .nav-link:hover {
   color: #90cdf4;
@@ -90,11 +83,6 @@ section {
   margin: auto;
 }
 
-.project h2 {
-  font-size: 2rem;
-  color: #0077cc;
-  margin-bottom: 2rem;
-}
 
 .project-grid {
   display: grid;
