@@ -5,10 +5,15 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 });
 
 const parts = [
-  "Graduate Student",
-  "ML Developer",
-  "Web Enthusiast",
-  "Blockchain Explorer"
+  "Data Analytics",
+  "Business Intelligence",
+  "Data Visualization"
+  "SQL",
+  "Python",
+  "Predictive Analytics",
+  "Exploratory Data Analysis (EDA)",
+  "KPI Reporting",
+  "Statistical Analysis"
 ];
 
 let fullText = "";
@@ -71,3 +76,4 @@ window.addEventListener("load", () => {
   const initial = document.querySelector(".nav-link.active") || navLinks[0];
   updateIndicator(initial);
 });
+
