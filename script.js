@@ -7,7 +7,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 const parts = [
   "Data Analytics",
   "Business Intelligence",
-  "Data Visualization"
+  "Data Visualization",
   "SQL",
   "Python",
   "Predictive Analytics",
@@ -76,4 +76,5 @@ window.addEventListener("load", () => {
   const initial = document.querySelector(".nav-link.active") || navLinks[0];
   updateIndicator(initial);
 });
+
 
