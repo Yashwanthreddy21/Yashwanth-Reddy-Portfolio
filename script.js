@@ -4,6 +4,8 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   this.reset();
 });
 
+document.getElementById("cursor").textContent = "|";
+
 const parts = [
   "Data Analytics",
   "Business Intelligence",
@@ -76,6 +78,7 @@ window.addEventListener("load", () => {
   const initial = document.querySelector(".nav-link.active") || navLinks[0];
   updateIndicator(initial);
 });
+
 
 
 
